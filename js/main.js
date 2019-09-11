@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    /*----------audio-------*/
+
+
     /*------- pop up ------*/
     var $popUp = $('#popUp');
     var $container = $('.container');
@@ -55,49 +58,54 @@ $(document).ready(function() {
     });
 
     /*---------------words slider----------*/
-    var slideIndex = 1;
-    showSlides(slideIndex);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 5000);
-    }
 
     /*---------------img slider----------*/
-    var slideIndex = 0;
-    carousel();
 
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlidesimg");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > x.length) { slideIndex = 1 }
-        x[slideIndex - 1].style.display = "block";
-        setTimeout(carousel, 3000);
+    var bg = $('.rightartwork');
+    var backgrounds = new Array('url(./img/art/b1.jpg)', 'url(./img/art/b2.jpg)', 'url(./img/art/b3.jpg)', 'url(./img/art/b4.jpg)', 'url(./img/art/b5.jpg)', 'url(./img/art/b6.jpg)', 'url(./img/art/b7.jpg)', 'url(./img/art/b8.jpg)', 'url(./img/art/b9.jpg)', 'url(./img/art/b10.jpg)');
+    var current = 0;
+
+    function nextBackground() {
+        bg.css({
+            'background': backgrounds[current = ++current % backgrounds.length],
+            'background-repeat': 'no-repeat',
+            'background-position': ' center',
+            'background-size': 'cover',
+            '-webkit-transition': 'background 4s',
+            '-moz-transition': 'background 4s',
+            '-o-transition': 'background 4s',
+            'transition': 'background 4s'
+        });
+
+        setTimeout(nextBackground, 4000);
     }
+    setTimeout(nextBackground, 4000);
+    bg.css({
+        'background': backgrounds[0],
+        'background-repeat': 'no-repeat',
+        'background-position': ' center',
+        'background-size': 'cover',
+        '-webkit-transition': 'background 4s',
+        '-moz-transition': 'background 4s',
+        '-o-transition': 'background 4s',
+        'transition': 'background 4s'
+    });
+
+    // var slideIndeximg = 0;
+    // carousel();
+
+    // function carousel() {
+    //     var i;
+    //     var x = $(".mySlidesimg");
+    //     for (i = 0; i < x.length; i++) {
+    //         x[i].style.display = "none";
+    //     }
+    //     slideIndeximg++;
+    //     if (slideIndeximg > x.length) { slideIndeximg = 1 }
+    //     x[slideIndeximg - 1].style.display = "block";
+    //     setTimeout(carousel, 3000);
+    // }
 
     /*-------------nav color-------*/
 

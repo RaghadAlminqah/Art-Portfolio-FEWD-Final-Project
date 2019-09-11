@@ -11,8 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="styles/main.css">
 
     <script>
@@ -100,9 +102,14 @@
                     </div>
                 </div>
             </div>
-            <div class="rightartwork">
+            <div class="rightartwork" style="background:url('./img/art/b1.jpg'); background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; -webkit-transition: background 1s;
+        -moz-transition: background 1s;
+        -o-transition: background 1s;
+        transition: background 1s;">
 
-                <img class="mySlidesimg" src="img/art/1.jpg">
+                <!-- <img class="mySlidesimg" src="img/art/1.jpg">
                 <img class="mySlidesimg" src="img/art/2.jpg">
                 <img class="mySlidesimg" src="img/art/3.jpg">
                 <img class="mySlidesimg" src="img/art/4.jpg">
@@ -111,7 +118,7 @@
                 <img class="mySlidesimg" src="img/art/7.jpg">
                 <img class="mySlidesimg" src="img/art/8.jpg">
                 <img class="mySlidesimg" src="img/art/9.jpg">
-                <img class="mySlidesimg" src="img/art/10.jpg">
+                <img class="mySlidesimg" src="img/art/10.jpg"> -->
 
             </div>
 
@@ -133,25 +140,27 @@
         <div class="slideshow-container">
 
             <div class="mySlides">
-                <div data-aos="zoom-in">
-                    <h3>Inspirations Words</h3>
-                    <q> There is a true artist within you. I believe in you! </q>
-                    <p class="author">- Mom</p>
-                </div>
+
+                <h3>Inspirations Words</h3>
+                <q> There is a true artist within you. I believe in you! </q>
+                <p class="author">- Mom</p>
+
             </div>
 
             <div class="mySlides">
-                <div data-aos="zoom-in">
-                    <h3>Inspirations Words</h3>
-                    <q> You work hard in slince. It means you are a successful person. Proud of you! </q>
-                    <p class="author">- Dad</p>
-                </div>
+
+                <h3>Inspirations Words</h3>
+                <q> You work hard in slince. It means you are a successful person. Proud of you! </q>
+                <p class="author">- Dad</p>
+
             </div>
 
             <div class="mySlides">
+
                 <h3>Inspirations Words</h3>
                 <q>You can , You Will & You Win</q>
                 <p class="author">- Uncle Hussain</p>
+
             </div>
 
             <div class="mySlides">
@@ -216,10 +225,43 @@
 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = $(".mySlides");
+            var dots = $(".dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+
+        }
+    </script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
