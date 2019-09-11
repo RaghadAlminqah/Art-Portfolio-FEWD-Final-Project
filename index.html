@@ -6,11 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Raghad's Art Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
+
+    <script rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script>
+        window.onload = function() {
+            var context = new AudioContext();
+        }
+    </script>
 </head>
 
 <body>
+
 
     <div class="home" id="home">
         <div class="flexhome">
@@ -19,6 +32,7 @@
                 </video>
 
             <div class="homecontent">
+
                 <section class="nav">
                     <nav>
                         <ul>
@@ -30,9 +44,18 @@
                         </ul>
                     </nav>
                 </section>
-                <h1>RAGHAD ALMINQAH</h1>
-                </br>
-                <p class="p-title">Portrait Artist</p>
+
+                <div data-aos="zoom-in">
+                    <h1>RAGHAD ALMINQAH</h1>
+                    </br>
+                    <p class="p-title">Portrait Artist</p>
+                </div>
+
+
+                <audio autoplay loop id="playAudio">
+                        <source src="./audio/La Tour.mp3" type="audio/mp3"> 
+                </audio>
+
             </div>
         </div>
     </div>
@@ -41,15 +64,20 @@
 
     <div class="about" id="about">
         <div class="flexabout">
+
             <div class="leftabout">
-                <img src="img/p1.jpg" alt="">
+                <div data-aos="zoom-in-up">
+                    <img src="img/p1.jpg" alt="">
+                </div>
             </div>
             <div class="rightabout">
-                <div class="aboutcontent">
-                    <h1>Raghad's Story</h1>
-                    <p>I starting to draw when I was a little child. I still remember spending every second of my childhood times drawing and painting. A few years growing up, I tried drawing with a pencil I used to draw houses, trees, and parts of the face.
-                        When I joined high school all my paintings where destroyed And I couldn’t continue drawing and painting. After 3 years, in 2017 my journey with charcoal began. I took a course on how to draw using charcoal and boom! Here I am.
-                        Since then I never stopped drawing and I will never quit for any reason. It’s a life for me.</p>
+                <div data-aos="zoom-in-down">
+                    <div class="aboutcontent">
+                        <h1>Raghad's Story</h1>
+                        <p>I starting to draw when I was a little child. I still remember spending every second of my childhood times drawing and painting. A few years growing up, I tried drawing with a pencil I used to draw houses, trees, and parts of the
+                            face. When I joined high school all my paintings where destroyed And I couldn’t continue drawing and painting. After 3 years, in 2017 my journey with charcoal began. I took a course on how to draw using charcoal and boom! Here
+                            I am. Since then I never stopped drawing and I will never quit for any reason. It’s a life for me.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,44 +86,89 @@
 
     <div class="artwork" id="artwork">
         <div class="flexartwork">
+
             <div class="leftartwork">
-                <div class="arttitlediv">
-                    <h1 class="arttitle"> Artwork Gallery </h1>
-                </div>
-                <div class="artpdiv">
-                    <p class="artp"> Most of my art pieces took 2-3 months and they are in (A4, A3, A2) sizes. Click below to see them all in one place. </p>
-                </div>
-                <div class="art-button">
-                    <button id="artbutton">See All </button>
+                <div data-aos="fade-right">
+                    <div class="arttitlediv">
+                        <h1 class="arttitle"> Artwork Gallery </h1>
+                    </div>
+                    <div class="artpdiv">
+                        <p class="artp"> Most of my art pieces took 2-3 months and they are in (A4, A3, A2) sizes. Click below to see them all in one place. </p>
+                    </div>
+                    <div class="art-button">
+                        <button id="artbutton">See All </button>
+                    </div>
                 </div>
             </div>
             <div class="rightartwork">
 
-                <img class="mySlidesimg" src="img/1.jpg">
-                <img class="mySlidesimg" src="img/3.jpg">
-                <img class="mySlidesimg" src="img/2.jpg">
+                <img class="mySlidesimg" src="img/art/1.jpg">
+                <img class="mySlidesimg" src="img/art/2.jpg">
+                <img class="mySlidesimg" src="img/art/3.jpg">
+                <img class="mySlidesimg" src="img/art/4.jpg">
+                <img class="mySlidesimg" src="img/art/5.jpg">
+                <img class="mySlidesimg" src="img/art/6.jpg">
+                <img class="mySlidesimg" src="img/art/7.jpg">
+                <img class="mySlidesimg" src="img/art/8.jpg">
+                <img class="mySlidesimg" src="img/art/9.jpg">
+                <img class="mySlidesimg" src="img/art/10.jpg">
+
+
+
+
 
             </div>
 
         </div>
     </div>
+
+
+    <div id="popUp" data-aos="fade-in" class="popUp hidden">
+        <a href="#" class="closePopUp">X</a>
+        <div class="container">
+        </div>
+
+    </div>
     </div>
 
+
+
     <div class="comments">
+
         <div class="slideshow-container">
+
             <div class="mySlides">
-                <q> Proud of you! </q>
-                <p class="author">- Mom</p>
+                <div data-aos="zoom-in">
+                    <h3>Inspirations Words</h3>
+                    <q> There is a true artist within you. I believe in you! </q>
+                    <p class="author">- Mom</p>
+                </div>
             </div>
 
             <div class="mySlides">
-                <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
-                <p class="author">- Ernest Hemingway</p>
+                <div data-aos="zoom-in">
+                    <h3>Inspirations Words</h3>
+                    <q> You work hard in slince. It means you are a successful person. Proud of you! </q>
+                    <p class="author">- Dad</p>
+                </div>
             </div>
 
             <div class="mySlides">
-                <q>I have not failed. I've just found 10,000 ways that won't work.</q>
-                <p class="author">- Thomas A. Edison</p>
+                <h3>Inspirations Words</h3>
+                <q>You can , You Will & You Win</q>
+                <p class="author">- Uncle Hussain</p>
+            </div>
+
+            <div class="mySlides">
+                <h3>Inspirations Words</h3>
+                <q>You will be huge artist very soon!</q>
+                <p class="author">- Uncle Khalid</p>
+            </div>
+
+            <div class="mySlides">
+                <h3>Inspirations Words</h3>
+                <q>I didn't know I have great artist cousin like you. keep going!</q>
+                <p class="author">- Unkown cousin</p>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -106,23 +179,27 @@
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
         </div>
 
     </div>
     <div class="shop" id="shop">
         <div class="flexform">
-            <div class="form">
-                <h1> Take your place! </h1>
-                <p>Fill the form below to take your place in the line for a free drawing. </p>
-                <h3> Art Paice Details: </h3>
-                <ul>
-                    <li>Color: Black & White</li>
-                    <li>Size: A4 </li>
-                    <li>Location: Riyadh </li>
-                    <li>Frame & Delivery: Paied</li>
-                </ul>
-                <div class="formbutton"></div>
-                <button id="formbutton"> fill form</button>
+            <div data-aos="fade-left">
+                <div class="form">
+                    <h1> Take your place! </h1>
+                    <p>Fill the form below to take your place in the line for a free drawing. </p>
+                    <h3> Art Paice Details: </h3>
+                    <ul>
+                        <li>Color: Black & White</li>
+                        <li>Size: A4 </li>
+                        <li>Location: Riyadh </li>
+                        <li>Frame & Delivery: Paied</li>
+                    </ul>
+                    <div class="formbutton"></div>
+                    <button id="formbutton"> <a href="#home">Fill The Form</a></button>
+                </div>
             </div>
         </div>
 
@@ -133,10 +210,10 @@
 
             <div class="socialmedia">
                 <div class="icon-bar">
-                    <a href="https://www.instagram.com/raghad__art/" class="instagram"><i class="fa fa-instagram "></i></a>
-                    <a href="#" class="snapchat tooltip"><i class="fa fa-snapchat-ghost tooltip"></i><span class="tooltiptext">ID: Raghad_artt</span></a>
-                    <a href="https://twitter.com/raghad__art" class="twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/raghad-alminqah/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/raghad__art/" class="instagram "><i class="fa fa-instagram "id='fa-2x'></i></a>
+                    <a href="#" class="snapchat tooltip"><i class="fa fa-snapchat-ghost  tooltip" id='fa-2x'></i><span class="tooltiptext">ID: Raghad_artt</span></a>
+                    <a href="https://twitter.com/raghad__art" class="twitter"><i class="fa fa-twitter "id='fa-2x'></i></a>
+                    <a href="https://www.linkedin.com/in/raghad-alminqah/" class="linkedin"><i class="fa fa-linkedin "id='fa-2x'></i></a>
                 </div>
             </div>
 
@@ -145,6 +222,9 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <script src="js/main.js"></script>
 
 </body>

@@ -44,7 +44,7 @@ li {
 
 li a {
     letter-spacing: 9px;
-    font-size: 17px;
+    font-size: 15px;
     color: #fff;
     padding: 8px;
 }
@@ -57,6 +57,7 @@ a:hover {
 
 a:link {
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -66,8 +67,8 @@ a:link {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 600px;
-    z-index: -100px;
+    height: 1000px;
+    z-index: -100;
     object-fit: cover;
 }
 
@@ -95,6 +96,7 @@ a:link {
 .homecontent h1 {
     display: block;
     font-size: 35px;
+    font-family: 'Playfair Display', serif;
     letter-spacing: 20px;
     padding-top: 200px;
 }
@@ -103,6 +105,7 @@ a:link {
     display: block;
     letter-spacing: 16px;
     padding-left: 12px;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -119,7 +122,7 @@ a:link {
 .flexabout {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 400px;
+    height: 40vmax;
     display: flex;
     align-items: center;
 }
@@ -158,11 +161,13 @@ a:link {
     padding: 0px 20px;
     margin: 0px;
     color: white;
-    font-size: 18px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .aboutcontent h1 {
     text-align: left;
+    font-family: 'Playfair Display', serif;
     padding: 15px 20px;
     margin: 0px;
     color: #cf9e76;
@@ -188,6 +193,7 @@ a:link {
 
 .arttitle {
     display: block;
+    font-family: 'Playfair Display', serif;
     text-align: center;
     color: #cf9e76;
     width: 100%;
@@ -211,7 +217,8 @@ a:link {
     overflow-wrap: break-word;
     color: #fff;
     margin: 0px;
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
     width: 100%;
     line-height: 40px;
     height: 165px;
@@ -231,6 +238,7 @@ a:link {
     font-size: 14px;
     border: 1px solid #cf9e76;
     border-radius: 7px;
+    font-family: 'Playfair Display', serif;
 }
 
 #artbutton:hover {
@@ -253,11 +261,98 @@ a:link {
 }
 
 .rightartwork img {
-    width: 193px;
-    height: 273px;
-    padding-left: 171px;
-    padding-top: 115px;
-    transform: rotate(-1deg);
+    width: 199px;
+    height: 278px;
+    padding-left: 179px;
+    padding-top: 112px;
+    transform: rotate(-0.5deg);
+}
+
+
+/*------------pop up --------*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 10px;
+    padding: 40px;
+}
+
+.card {
+    display: inline-block;
+    width: 196px;
+}
+
+#popUp {
+    opacity: 0.95;
+    position: absolute;
+    top: 174%;
+    left: 11%;
+    width: 80%;
+    height: auto;
+    background: rgba(0, 0, 0, 1);
+    z-index: +100;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+#popUp .closePopUp {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#popUp.popUp .container {
+    display: none;
+}
+
+.img__wrap {
+    position: relative;
+    height: 200px;
+    width: 150px;
+    margin: 0px;
+}
+
+.img__description {
+    position: absolute;
+    top: 150px;
+    bottom: 0;
+    left: 2px;
+    right: 0;
+    height: 39px;
+    margin: 0px 0px;
+    padding: 7px 0px;
+    background: rgba(207, 158, 118, 0.8);
+    color: #fff;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.container img {
+    width: 150px;
+    height: 200px;
+    border: 2px solid white;
+}
+
+.img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container p {
+    width: 150px;
+    color: white;
+    text-align: center;
 }
 
 
@@ -309,9 +404,6 @@ a:link {
     background: #1e1614;
 }
 
-
-/* The dots/bullets/indicators */
-
 .dot {
     cursor: pointer;
     height: 15px;
@@ -323,28 +415,27 @@ a:link {
     transition: background-color 0.6s ease;
 }
 
-
-/* Add a background color to the active dot/circle */
-
 .active,
 .dot:hover {
     background-color: #717171;
 }
 
-
-/* Add an italic font style to all quotes */
+.mySlides h3 {
+    font-size: 25px;
+    color: #1e1614;
+    font-family: 'Playfair Display', serif;
+}
 
 q {
     font-style: italic;
-    font-size: 23px;
+    font-size: 18px;
     color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
-
-
-/* Add a blue color to the author */
 
 .author {
     color: #1e1614;
+    font-family: 'Playfair Display', serif;
     ;
 }
 
@@ -377,13 +468,14 @@ q {
 }
 
 .form {
-    font-size: 24px;
+    font-size: 22px;
     color: white;
     display: block;
+    font-family: 'Playfair Display', serif;
     padding: 20px;
     text-align: center;
-    width: 46%;
-    height: 73%;
+    width: 85%;
+    height: 85%;
 }
 
 .form ul {
@@ -398,6 +490,7 @@ q {
     list-style: circle;
     margin: 2px 39px;
     padding: 2px 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form h3 {
@@ -410,6 +503,7 @@ q {
     display: block;
     text-align: justify;
     color: #fff;
+    font-family: 'Roboto', sans-serif;
     margin: 0px 23px;
     font-size: 20px;
 }
@@ -430,11 +524,27 @@ q {
     font-size: 14px;
     border: 1px solid #cf9e76;
     border-radius: 7px;
+    margin: 35px 0px;
+    font-family: inherit;
+}
+
+#formbutton a {
+    font-size: 14px;
+    border: none;
+    color: black;
+    font-family: inherit;
+}
+
+#formbutton a:link {
+    text-decoration: none;
 }
 
 #formbutton:hover {
     background-color: #1e1614;
     border: 1px solid #1e1614;
+}
+
+#formbutton a:hover {
     color: white;
 }
 
@@ -477,8 +587,12 @@ q {
     width: 20px;
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
+    margin: 5px 11px;
     border-radius: 100%;
+}
+
+#fa-2x {
+    font-size: 1.5em;
 }
 
 .fa:hover {
@@ -486,22 +600,20 @@ q {
 }
 
 .fa-twitter {
-    background: #55ACEE;
     color: white;
+    width: 20px;
+    height: 20px;
 }
 
 .fa-linkedin {
-    background: #007bb5;
     color: white;
 }
 
 .fa-instagram {
-    background: #125688;
     color: white;
 }
 
 .fa-snapchat-ghost {
-    background: #fffc00;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
