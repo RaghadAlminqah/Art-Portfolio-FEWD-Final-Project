@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-    /*----------audio-------*/
-
-
     /*------- pop up ------*/
     var $popUp = $('#popUp');
     var $container = $('.container');
